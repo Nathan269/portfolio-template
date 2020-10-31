@@ -1,0 +1,217 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*Sets the margin of everything to 0px*/
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+/*Sets the colour of the background*/
+body {
+	background-color: #282828;
+}
+
+/* Adjusts copyright message */
+.copyright p{
+	margin-left: 40%;
+	font-size: 20px;
+	color: white;
+	margin: 0 0 1% 40%;
+	opacity: 0.2;
+}
+
+/*Sets colour, width, border, height and margins of the main div where the image and text are within*/
+.post-container {
+	background-color: #000;
+	width: 70%;
+	height: 100%;
+	margin: 3% 15% 3% 15%;
+	border: 1px solid #FFFFFF;
+}
+/*Makes adjustments to the text content within the page*/
+.post-content {
+	font-size: 30px;
+	color: white;
+	margin: 5% 5% 0% 40%;
+}
+/*Makes adjustments to the text content within the page*/
+.post-content p{
+	font-size: 27px;
+}
+/*Makes adjustments to the text content within the page*/
+.post-content h2{
+	color: #BD3381;
+}
+/*Makes adjustments to width of the main image (covers 35% of post-container div)*/
+.post-thumb {
+	width: 35%;
+	height: 100%;
+	float: left;
+}
+/*Makes adjustments to the image and allows the image to be outwith the div space to allow a higher quality image*/
+.post-thumb img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	background-size: 100%;
+	border: solid #FFFFFF;
+	border-width: 0px 1px 0px 0px;
+	display: block;
+}
+
+.button , .button2 {
+display:inline-block;
+/**other codes**/
+}
+
+.button {
+  width: 180px;
+  max-width: 100%;
+  margin: 5% 3% 5% 0%;
+  overflow: hidden;
+  position: relative;
+  transform: translatez(0);
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: 30px;
+  font-weight: normal;
+  box-shadow: 0 9px 18px rgba(0,0,0,0.2);
+}
+
+.button2 {
+  width: 180px;
+  max-width: 100%;
+  margin: 5% 5% 5% 0%;
+  overflow: hidden;
+  position: relative;
+  transform: translatez(0);
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: 30px;
+  font-weight: normal;
+  box-shadow: 0 9px 18px rgba(0,0,0,0.2);
+}
+
+.instagram {
+  text-align: center;
+  border-radius: 40px;
+  padding: 16px;
+  color: white;
+  background: #BD3381;
+  transition: all 0.2s ease-out 0s;
+}
+
+.gradient {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  bottom: auto;
+  margin: auto;
+  z-index: -1;
+  background: radial-gradient(90px circle at top center, rgba(238,88,63,.8) 30%, rgba(255,255,255,0));
+  transition: all 0s ease-out 0s;
+  transform: translatex(-140px);
+  animation: 18s linear 0s infinite move;
+}
+
+@keyframes move {
+	0% {
+		transform: translatex(-140px);
+	}
+	25% {
+		transform: translatex(140px);
+		opacity: 0.3;
+	}
+	50% {
+		transform: translatex(140px);
+		opacity: 1;
+		background: radial-gradient(90px circle at bottom center, rgba(238,88,63,.5) 30%, rgba(255,255,255,0));
+	}
+	75% {
+		transform: translatex(-140px);
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 1;
+		transform: translatex(-140px);
+		background: radial-gradient(90px circle at top center, rgba(238,88,63,.5) 30%, rgba(255,255,255,0));
+	}
+}
+
+/* Social Media Buttons */
+.social-buttons a{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 40px;
+  width: 75px;
+  height: 60px;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 8px;
+  margin-bottom: 5%;
+}
+
+.social-buttons a::before{
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 60px;
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover::before{
+  transform: scale(0);
+}
+
+.social-buttons a i{
+  transition: 0.175s ease-in;
+}
+
+.social-buttons a:hover i{
+  background: linear-gradient(45deg, #BD3381 30%, rgba(255,255,255,0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.7);
+}
+
+
+
+
+
+/* TABLET VIEW */
+
+@media only screen and (max-width: 1600px) {
+ /*Sets colour, width, border, height and margins of the main div where the image and text are within*/
+.post-container {
+	background-color: #E09899;
+	width: 90%;
+	margin: 3% 5% 3% 5%;
+	height: 100%;
+	border: 1px solid #FFFFFF;
+}
+
+}
+
+
+
+
+
+
+
+/* MOBILE VIEW */
+
+@media only screen and (max-width: 815px) {
+ .post-content {
+    background-color: #FFF;
+  }
+
+}
